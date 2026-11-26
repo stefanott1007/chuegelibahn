@@ -2173,3 +2173,192 @@ body {
 }
 /* The horizontal rolling ball is intentionally hidden on narrow phone layouts,
    where milestones are stacked vertically. */
+
+
+/* 2026-11: Footer remains compact and deliberately left-aligned. */
+.footer-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 1fr);
+  align-items: start;
+  gap: clamp(28px, 7vw, 100px);
+}
+.footer-grid > div { min-width: 0; }
+.footer-grid > div:nth-child(2) { justify-self: end; }
+.footer-grid > div:nth-child(2) > strong {
+  display: block;
+  font-size: .9rem;
+  margin-bottom: 16px;
+}
+.footer-grid > div:nth-child(2) > div:not(.footer-legal) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 12px 22px;
+}
+.footer .footer-grid a:not(.logo) {
+  display: inline-block;
+  padding: 0;
+  text-decoration: none;
+  color: #f1f5eb;
+  font-weight: 650;
+  line-height: 1.5;
+}
+.footer .footer-grid a:not(.logo):hover,
+.footer .footer-grid a:not(.logo):focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.footer .footer-legal {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 14px 22px;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid #647466;
+}
+.footer .footer-legal a { color: #d6e0d2 !important; }
+
+/* Petition: non-overlapping hero and wide editorial content. */
+#petition .petition-hero-grid {
+  grid-template-columns: minmax(0, .96fr) minmax(0, 1.04fr);
+  gap: clamp(32px, 5vw, 80px);
+  align-items: start;
+}
+#petition .petition-hero-grid > div { min-width: 0; }
+#petition .petition-head h1 {
+  font-size: clamp(2.55rem, 4.2vw, 4.6rem);
+  overflow-wrap: break-word;
+}
+#petition .petition-head .form-card {
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+}
+#petition .petition-head .two-fields { min-width: 0; }
+#petition .petition-head .field { min-width: 0; }
+#petition .petition-head .field input { width: 100%; min-width: 0; box-sizing: border-box; }
+#petition .petition-info-grid { max-width: none; }
+#petition .petition-benefits { padding-top: clamp(48px, 6vw, 75px); }
+#petition .petition-intro { max-width: 760px; font-size: 1.1rem; margin-bottom: 26px; }
+#petition .petition-benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin: 28px 0 14px;
+}
+#petition .petition-benefit {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: clamp(20px, 2.5vw, 30px);
+  min-width: 0;
+}
+#petition .petition-benefit > span {
+  font-size: .86rem;
+  font-weight: 900;
+  color: var(--green);
+}
+#petition .petition-benefit h3 { margin: 12px 0; font-size: 1.35rem; }
+#petition .petition-benefit p { margin: 0; }
+#petition .petition-reference {
+  margin: 10px 0 clamp(38px, 5vw, 68px);
+  font-size: .86rem;
+  color: var(--muted);
+}
+#petition .petition-next-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, .9fr);
+  gap: clamp(25px, 5vw, 70px);
+  align-items: start;
+}
+#petition .petition-next-grid > * { min-width: 0; }
+#petition .petition-followup {
+  background: #ebf0e6;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: clamp(20px, 3vw, 35px);
+}
+#petition .petition-followup-label {
+  font-size: .84rem;
+  font-weight: 900;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+#petition .petition-followup h3 { margin: 12px 0 17px; font-size: clamp(1.4rem,2vw,2rem); }
+#petition .petition-followup .progress-wrap {
+  margin: 20px 0;
+  padding: 20px;
+  background: #fff;
+}
+#petition .petition-followup .progress-head { gap: 14px; flex-wrap: wrap; }
+
+/* Donation project details: a true two-column, full-width layout. */
+#spenden .donation-use-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 22px;
+}
+#spenden .donation-use-header h2 { margin-bottom: 0; }
+#spenden .donation-use-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.06fr) minmax(0, .94fr);
+  gap: clamp(30px, 5vw, 80px);
+  align-items: start;
+}
+#spenden .donation-use-layout > * { min-width: 0; }
+#spenden .donation-use-layout p { line-height: 1.65; }
+#spenden .donation-progress { margin: 0 0 26px; }
+#spenden .donation-progress .progress-head { gap: 15px; flex-wrap: wrap; }
+#spenden .donation-progress .smallprint { margin-top: 12px; }
+#spenden .donation-place {
+  margin: 0;
+  background: #ebf0e6;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+}
+#spenden .donation-place img {
+  display: block;
+  width: 100%;
+  height: clamp(250px, 33vw, 440px);
+  object-fit: cover;
+}
+#spenden .donation-place figcaption {
+  padding: 18px 22px 22px;
+  line-height: 1.6;
+}
+#spenden .inline-image {
+  display: grid;
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+  gap: clamp(20px,4vw,55px);
+  align-items: center;
+}
+#spenden .inline-image img {
+  width: 100%;
+  max-height: none;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+}
+#spenden .inline-image > div { max-width: 600px; }
+
+@media (max-width: 920px) {
+  #petition .petition-hero-grid,
+  #petition .petition-next-grid,
+  #spenden .donation-use-layout { grid-template-columns: 1fr; }
+  #petition .petition-hero-grid { gap: 30px; }
+  #petition .petition-benefit-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  #spenden .donation-use-header { align-items: flex-start; flex-direction: column; }
+  #spenden .donation-place img { height: 330px; }
+}
+@media (max-width: 680px) {
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-grid > div:nth-child(2) { justify-self: start; }
+  .footer .footer-legal { margin-top: 18px; }
+  #petition .petition-benefit-grid,
+  #spenden .inline-image { grid-template-columns: 1fr; }
+  #spenden .donation-place img { height: 240px; }
+  #spenden .donation-use-header .btn { max-width: 100%; }
+}
