@@ -2146,3 +2146,30 @@ body {
   padding: 11px 18px;
   font-size: .9rem;
 }
+
+/* Imprint and privacy pages, with accessible links throughout the site */
+.footer-legal {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 18px;
+}
+.legal-content {
+  max-width: 850px;
+}
+.legal-content h2 {
+  font-size: clamp(1.45rem, 2.8vw, 2.2rem);
+  margin: 30px 0 14px;
+}
+.legal-content h2:first-child {
+  margin-top: 0;
+}
+.legal-content p {
+  line-height: 1.7;
+}
+.legal-content a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+/* The horizontal rolling ball is intentionally hidden on narrow phone layouts,
+   where milestones are stacked vertically. */
