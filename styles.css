@@ -2097,3 +2097,11 @@ body {
   .build-step { display: block; }
   .build-step img { height: 215px; min-height: 0; }
 }
+
+/* Timeline summary replaces the duplicate project-status section */
+.timeline-context {
+  max-width: 900px;
+  margin: 8px 0 22px;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
