@@ -4,6 +4,7 @@ A static website using HTML, CSS and JavaScript. No framework, package installat
 
 ## Files
 
+
 - `index.html` — project overview
 - `petition.html` — petition demo
 - `spenden.html` — donation demo
