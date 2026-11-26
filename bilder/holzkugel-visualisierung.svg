@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+<title id="title">Eine Holzkugel für Winti</title>
+<desc id="desc">Visualisierung einer naturbelassenen Holzkugel auf einem warmen Holztisch</desc>
+<defs>
+  <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#ebeee1"/><stop offset=".55" stop-color="#dfe5d2"/><stop offset="1" stop-color="#c4d2be"/></linearGradient>
+  <radialGradient id="ball" cx=".29" cy=".23" r=".83"><stop stop-color="#fff0ca"/><stop offset=".23" stop-color="#e9bd7e"/><stop offset=".58" stop-color="#cf8d4e"/><stop offset=".86" stop-color="#9c5b2c"/><stop offset="1" stop-color="#65381f"/></radialGradient>
+  <linearGradient id="plank" x2="0" y2="1"><stop stop-color="#b18356"/><stop offset=".55" stop-color="#9b6a40"/><stop offset="1" stop-color="#674128"/></linearGradient>
+  <filter id="shadow"><feGaussianBlur stdDeviation="27"/></filter>
+  <clipPath id="clipball"><circle cx="598" cy="383" r="269"/></clipPath>
+  <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".05 .17" numOctaves="4" seed="13" result="noise"/><feColorMatrix in="noise" type="saturate" values="0" result="mono"/><feComponentTransfer in="mono" result="alpha"><feFuncA type="linear" slope=".11"/></feComponentTransfer><feBlend in="SourceGraphic" in2="alpha" mode="multiply"/></filter>
+</defs>
+<rect width="1200" height="800" fill="url(#bg)"/>
+<ellipse cx="1030" cy="135" rx="420" ry="255" fill="#fff8de" opacity=".27" filter="url(#shadow)"/>
+<rect y="620" width="1200" height="180" fill="url(#plank)"/>
+<g fill="none" stroke="#e0b07d" stroke-width="2" opacity=".35">
+<path d="M0 672Q230 644 484 674T1200 666"/><path d="M0 720Q230 691 484 722T1200 716"/><path d="M0 764Q230 733 484 764T1200 760"/>
+</g>
+<ellipse cx="603" cy="645" rx="293" ry="55" fill="#493322" opacity=".49" filter="url(#shadow)"/>
+<circle cx="598" cy="383" r="269" fill="url(#ball)"/>
+<g clip-path="url(#clipball)" filter="url(#grain)">
+  <g fill="none" stroke="#874c26" stroke-width="3.1" opacity=".26">
+    <path d="M300 180Q680 110 805 307T885 630"/>
+    <path d="M312 200Q680 130 785 320T862 630"/>
+    <path d="M306 226Q665 153 770 334T836 626"/>
+    <path d="M297 251Q645 172 755 339T819 626"/>
+    <path d="M288 280Q616 192 741 344T792 636"/>
+    <path d="M282 307Q614 211 724 357T773 633"/>
+    <path d="M276 332Q606 236 706 375T748 623"/>
+    <path d="M277 360Q586 256 691 380T727 633"/>
+    <path d="M275 393Q572 293 671 400T707 632"/>
+    <path d="M278 422Q560 330 652 420T681 645"/>
+    <path d="M285 456Q546 373 632 445T647 651"/>
+    <path d="M305 492Q518 414 608 477T607 654"/>
+  </g>
+  <g fill="none" stroke="#fff5d9" stroke-width="2.2" opacity=".31">
+    <path d="M329 178Q675 113 805 300"/><path d="M320 239Q632 167 755 330"/><path d="M285 328Q600 230 708 377"/><path d="M284 413Q563 330 649 424"/>
+  </g>
+  <ellipse cx="489" cy="278" rx="122" ry="94" fill="#fff7dd" opacity=".26" filter="url(#shadow)"/>
+</g>
+<circle cx="598" cy="383" r="269" fill="none" stroke="#fff1d1" stroke-opacity=".2" stroke-width="5"/>
+<g fill="#ffffff" opacity=".18"><circle cx="246" cy="137" r="15"/><circle cx="275" cy="116" r="6"/><circle cx="988" cy="195" r="13"/></g>
+</svg>
