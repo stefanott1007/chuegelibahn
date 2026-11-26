@@ -2362,3 +2362,42 @@ body {
   #spenden .donation-place img { height: 240px; }
   #spenden .donation-use-header .btn { max-width: 100%; }
 }
+
+
+/* Compact transparency budget across the available desktop width. */
+#transparenz .budget-heading {
+  display: block;
+  margin-top: 44px;
+  margin-bottom: 12px;
+}
+#transparenz .budget-heading h2 { max-width: none; }
+#transparenz .compact-budget-intro {
+  margin: 0 0 24px;
+  max-width: 850px;
+  color: var(--muted);
+}
+#transparenz .budget-table { width: 100%; max-width: none; }
+#transparenz .budget-table table { width: 100%; }
+#transparenz .benefits-section .card {
+  padding-top: 25px;
+}
+#transparenz .benefits-section .card h3 { margin-top: 0; }
+/* The donation page mirrors the petition progress UI. 
+   An unknown total is never displayed as CHF 0 or as an invented figure. */
+#spenden .donation-progress .progress {
+  margin: 12px 0 14px;
+  height: 11px;
+  border-radius: 999px;
+}
+#spenden .donation-progress .progress .donation-unverified-progress {
+  display: block;
+  width: 0%;
+  height: 100%;
+}
+#spenden .donation-progress-current { font-size: clamp(1.6rem, 2.3vw, 2.25rem); }
+#petition .petition-benefit > span { display: none; }
+#petition .petition-benefit h3 { margin-top: 0; }
+#spenden .donation-faq,
+#petition .petition-faq { padding-top: clamp(44px,5vw,65px); }
+#spenden .donation-faq .faq,
+#petition .petition-faq .faq { max-width: 100%; }
