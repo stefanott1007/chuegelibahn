@@ -1,42 +1,95 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
-<title id="title">Eine Holzkugel für Winti</title>
-<desc id="desc">Visualisierung einer naturbelassenen Holzkugel auf einem warmen Holztisch</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title description">
+<title id="title">Winti-Holzkugel – Visualisierung eines Dankeschöns</title>
+<desc id="description">Hochwertig gestaltete, naturfarbene Holzkugel mit graviertem WINTI-Schriftzug, Winterthurer Stadt-Silhouette und einer stilisierten Kugelrinne, auf einem Waldholzsockel.</desc>
 <defs>
-  <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#ebeee1"/><stop offset=".55" stop-color="#dfe5d2"/><stop offset="1" stop-color="#c4d2be"/></linearGradient>
-  <radialGradient id="ball" cx=".29" cy=".23" r=".83"><stop stop-color="#fff0ca"/><stop offset=".23" stop-color="#e9bd7e"/><stop offset=".58" stop-color="#cf8d4e"/><stop offset=".86" stop-color="#9c5b2c"/><stop offset="1" stop-color="#65381f"/></radialGradient>
-  <linearGradient id="plank" x2="0" y2="1"><stop stop-color="#b18356"/><stop offset=".55" stop-color="#9b6a40"/><stop offset="1" stop-color="#674128"/></linearGradient>
-  <filter id="shadow"><feGaussianBlur stdDeviation="27"/></filter>
-  <clipPath id="clipball"><circle cx="598" cy="383" r="269"/></clipPath>
-  <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".05 .17" numOctaves="4" seed="13" result="noise"/><feColorMatrix in="noise" type="saturate" values="0" result="mono"/><feComponentTransfer in="mono" result="alpha"><feFuncA type="linear" slope=".11"/></feComponentTransfer><feBlend in="SourceGraphic" in2="alpha" mode="multiply"/></filter>
+ <linearGradient id="forest" x1="0" x2="1" y1=".05" y2="1">
+  <stop stop-color="#d8dfce"/><stop offset=".43" stop-color="#e2dfcd"/><stop offset="1" stop-color="#8c9f80"/>
+ </linearGradient>
+ <radialGradient id="light" cx="33%" cy="18%" r="72%">
+  <stop stop-color="#ffdf9b"/><stop offset=".25" stop-color="#ecc18a"/>
+  <stop offset=".59" stop-color="#cf975b"/><stop offset=".81" stop-color="#af713e"/>
+  <stop offset=".96" stop-color="#714025"/><stop offset="1" stop-color="#40261b"/>
+ </radialGradient>
+ <linearGradient id="table" x1="0" x2=".2" y1="0" y2="1">
+  <stop stop-color="#d4ac7a"/><stop offset=".26" stop-color="#b67d4c"/><stop offset=".8" stop-color="#805032"/><stop offset="1" stop-color="#5e3828"/>
+ </linearGradient>
+ <linearGradient id="wood-gold" x1="0" x2="1" y1="0" y2="1">
+  <stop stop-color="#fff0c6"/><stop offset=".5" stop-color="#bd8151"/><stop offset="1" stop-color="#7c4a27"/>
+ </linearGradient>
+ <radialGradient id="vignette"><stop offset=".56" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#192819" stop-opacity=".3"/></radialGradient>
+ <filter id="blur20"><feGaussianBlur stdDeviation="22"/></filter>
+ <filter id="blur6"><feGaussianBlur stdDeviation="6"/></filter>
+ <filter id="softShadow" x="-40%" y="-40%" width="180%" height="180%">
+  <feGaussianBlur stdDeviation="16"/>
+ </filter>
+ <filter id="wood-noise" x="0" y="0" width="100%" height="100%">
+  <feTurbulence type="fractalNoise" baseFrequency=".085 .04" numOctaves="4" seed="8" result="noise"/>
+  <feColorMatrix in="noise" type="saturate" values="0" result="mono"/>
+  <feComponentTransfer in="mono"><feFuncA type="linear" slope=".14"/></feComponentTransfer>
+ </filter>
+ <clipPath id="ballclip"><circle cx="606" cy="372" r="292"/></clipPath>
+ <filter id="engrave" x="-30%" y="-50%" width="160%" height="200%">
+  <feGaussianBlur in="SourceAlpha" stdDeviation="1.2" result="edged"/>
+  <feOffset in="edged" dx="1.6" dy="2.2" result="lower"/>
+  <feMerge><feMergeNode in="lower"/><feMergeNode in="SourceGraphic"/></feMerge>
+ </filter>
 </defs>
-<rect width="1200" height="800" fill="url(#bg)"/>
-<ellipse cx="1030" cy="135" rx="420" ry="255" fill="#fff8de" opacity=".27" filter="url(#shadow)"/>
-<rect y="620" width="1200" height="180" fill="url(#plank)"/>
-<g fill="none" stroke="#e0b07d" stroke-width="2" opacity=".35">
-<path d="M0 672Q230 644 484 674T1200 666"/><path d="M0 720Q230 691 484 722T1200 716"/><path d="M0 764Q230 733 484 764T1200 760"/>
+<rect width="1200" height="800" fill="url(#forest)"/>
+<g filter="url(#blur20)" opacity=".67">
+ <ellipse cx="1042" cy="150" rx="170" ry="270" fill="#5e7656"/>
+ <ellipse cx="110" cy="130" rx="230" ry="290" fill="#a4b8a0"/>
+ <circle cx="958" cy="155" r="85" fill="#e9e6b3"/>
+ <circle cx="245" cy="100" r="65" fill="#f5eaca"/>
+ <circle cx="125" cy="370" r="120" fill="#78926f"/>
+ <circle cx="1115" cy="465" r="130" fill="#789268"/>
 </g>
-<ellipse cx="603" cy="645" rx="293" ry="55" fill="#493322" opacity=".49" filter="url(#shadow)"/>
-<circle cx="598" cy="383" r="269" fill="url(#ball)"/>
-<g clip-path="url(#clipball)" filter="url(#grain)">
-  <g fill="none" stroke="#874c26" stroke-width="3.1" opacity=".26">
-    <path d="M300 180Q680 110 805 307T885 630"/>
-    <path d="M312 200Q680 130 785 320T862 630"/>
-    <path d="M306 226Q665 153 770 334T836 626"/>
-    <path d="M297 251Q645 172 755 339T819 626"/>
-    <path d="M288 280Q616 192 741 344T792 636"/>
-    <path d="M282 307Q614 211 724 357T773 633"/>
-    <path d="M276 332Q606 236 706 375T748 623"/>
-    <path d="M277 360Q586 256 691 380T727 633"/>
-    <path d="M275 393Q572 293 671 400T707 632"/>
-    <path d="M278 422Q560 330 652 420T681 645"/>
-    <path d="M285 456Q546 373 632 445T647 651"/>
-    <path d="M305 492Q518 414 608 477T607 654"/>
-  </g>
-  <g fill="none" stroke="#fff5d9" stroke-width="2.2" opacity=".31">
-    <path d="M329 178Q675 113 805 300"/><path d="M320 239Q632 167 755 330"/><path d="M285 328Q600 230 708 377"/><path d="M284 413Q563 330 649 424"/>
-  </g>
-  <ellipse cx="489" cy="278" rx="122" ry="94" fill="#fff7dd" opacity=".26" filter="url(#shadow)"/>
+<rect y="654" width="1200" height="146" fill="url(#table)"/>
+<path d="M0 655C225 628 337 677 620 654S1030 640 1200 655" fill="none" stroke="#edd1a4" stroke-width="8" opacity=".7"/>
+<g fill="none" stroke="#40291a" stroke-width="2" opacity=".25">
+ <path d="M0 698C350 668 640 705 1200 681"/>
+ <path d="M0 722C350 701 642 727 1200 704"/>
+ <path d="M0 761C350 729 655 778 1200 744"/>
 </g>
-<circle cx="598" cy="383" r="269" fill="none" stroke="#fff1d1" stroke-opacity=".2" stroke-width="5"/>
-<g fill="#ffffff" opacity=".18"><circle cx="246" cy="137" r="15"/><circle cx="275" cy="116" r="6"/><circle cx="988" cy="195" r="13"/></g>
+<ellipse cx="612" cy="664" rx="309" ry="43" fill="#2d231b" opacity=".44" filter="url(#softShadow)"/>
+<circle cx="606" cy="372" r="292" fill="url(#light)"/>
+<g clip-path="url(#ballclip)">
+ <g opacity=".27" stroke="#7c4927" stroke-width="3" fill="none">
+  <path d="M310 185C499 62 757 111 853 296C934 450 874 608 808 691"/>
+  <path d="M310 205C504 88 739 135 826 308C903 457 866 594 785 682"/>
+  <path d="M310 236C489 118 725 165 799 328C872 454 833 593 757 672"/>
+  <path d="M305 260C476 153 697 197 776 345C842 461 800 584 737 660"/>
+  <path d="M316 288C459 183 682 210 752 358C816 469 773 580 718 660"/>
+  <path d="M316 315C453 222 658 236 731 373C779 487 751 590 697 657"/>
+  <path d="M310 351C434 255 632 278 704 388C755 491 719 600 661 652"/>
+  <path d="M315 390C434 298 601 316 677 416C708 490 692 592 632 654"/>
+  <path d="M320 434C431 356 579 359 639 457C670 532 653 594 604 655"/>
+ </g>
+ <g opacity=".18" fill="none" stroke="#fff6e4" stroke-width="3">
+  <path d="M309 189C494 75 738 106 835 293"/><path d="M310 261C486 142 696 201 776 343"/>
+  <path d="M313 321C450 228 656 237 731 378"/><path d="M315 393C433 306 606 315 672 416"/>
+ </g>
+ <rect x="300" y="80" width="640" height="620" fill="#734122" opacity=".18" filter="url(#wood-noise)"/>
+ <ellipse cx="506" cy="221" rx="135" ry="102" fill="#fff6d6" opacity=".24" filter="url(#blur20)"/>
+ <g opacity=".2" fill="none" stroke="#56301b" stroke-width="1">
+  <path d="M341 380C500 240 780 295 839 460"/>
+  <path d="M343 395C504 266 759 306 827 464"/>
+  <path d="M349 420C514 299 736 325 808 477"/>
+ </g>
+ <!-- Engraved Winterthur-style outline above the WINTI lettering -->
+ <g transform="translate(606 301)" fill="none" stroke="#64371f" stroke-width="8" stroke-linejoin="round" stroke-linecap="round" opacity=".78" filter="url(#engrave)">
+  <path d="M-153 39V-19L-99-19V-44L-78-44V-77L-51-77V-44L-28-44V-9L13-9V-34L57-34V-66L82-66V-102L105-102V-66L121-66V-21L154-21V39"/>
+  <path d="M-172 39H173"/>
+  <path d="M-74-44V-61 M90-71V-87"/>
+  <path d="M-130 7h15m35 0h15m38 0h15m35 0h15m35 0h15m35 0h15"/>
+ </g>
+ <path d="M448 356Q606 375 765 358" fill="none" stroke="#fff1cf" stroke-opacity=".34" stroke-width="4"/>
+ <text x="607" y="456" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="100" font-weight="900" letter-spacing="1.5" fill="#e6bc80" opacity=".6" transform="translate(-1,-3)">WINTI.</text>
+ <text x="606" y="456" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="100" font-weight="900" letter-spacing="1.5" fill="#67391e" opacity=".91">WINTI.</text>
+ <g transform="translate(606,495)" fill="none" stroke="#703f23" stroke-linecap="round" stroke-width="6" opacity=".78">
+  <path d="M-88 0Q0 31 88 0"/>
+  <path d="M-62 16Q0 35 62 16" stroke-width="3" opacity=".65"/>
+ </g>
+</g>
+<circle cx="606" cy="372" r="291" fill="none" stroke="#fbe6b5" stroke-width="2" opacity=".34"/>
+<rect width="1200" height="800" fill="url(#vignette)"/>
 </svg>
