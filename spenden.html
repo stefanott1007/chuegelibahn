@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html lang="de-CH">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="#f6f5ee" name="theme-color" />
+    <title>Spenden – Kügelibahn Winterthur</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body data-page="spenden">
+    <div class="topline">
+      <div class="shell">
+        <span class="topline-badge"
+          ><strong class="community-wordmark">WINTI.</strong> Ein Herzensprojekt aus Winterthur –
+          für Kinder</span
+        ><span>Unabhängig · Lokal · Gemeinsam</span>
+      </div>
+    </div>
+    <header class="nav">
+      <div class="shell nav-inner">
+        <a class="logo" href="index.html"
+          ><span class="logo-mark">●</span> KÜGELIBAHN <span class="brand-location">WINTI.</span></a
+        ><button aria-controls="navlinks" aria-expanded="false" class="mobile-menu" id="menu">
+          ☰ Menü
+        </button>
+        <nav aria-label="Hauptnavigation" class="navlinks" id="navlinks">
+          <a href="index.html">Das Projekt</a><a href="petition.html">Petition</a
+          ><a href="spenden.html" class="active" aria-current="page">Spenden</a
+          ><a href="transparenz.html">Transparenz</a
+          ><a class="btn small main-nav-cta active" href="spenden.html" aria-current="page"
+            >Jetzt mithelfen ↗</a
+          >
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="page" id="spenden">
+        <div class="page-hero donation-head">
+          <div class="shell donation-landing-grid">
+            <div class="donation-landing-copy">
+              <span class="tag">Finanzierung des ersten Projekts</span>
+              <h1>Die erste Kügelibahn möglich machen.</h1>
+              <p>
+                Hilf mit, bei den Walcheweihern die ersten Kugelrinnen in bestehende Baumstämme zu
+                schnitzen. Unser erstes Spendenziel: CHF 5’000.
+              </p>
+              <div class="donation-goal-pill">
+                <span>Erstes Spendenziel</span><strong>CHF 5’000</strong>
+              </div>
+            </div>
+            <div class="form-card">
+              <span class="demo-pill">Checkout-Vorschau · keine Zahlung möglich</span>
+              <h3 class="form-title">Deine Unterstützung</h3>
+              <p class="muted">
+                Wähle einen Betrag. Du siehst gleich, welches Dankeschön wir dafür planen. Die
+                sichere Bezahlung mit TWINT wird vor dem Start eingerichtet.
+              </p>
+              <div aria-label="Spendenbetrag" class="chip-row" role="group">
+                <button class="chip" data-amount="25">CHF 25</button
+                ><button class="chip" data-amount="50">CHF 50</button
+                ><button class="chip selected" data-amount="80">CHF 80 · Apéro</button
+                ><button class="chip" data-amount="100">CHF 100 · + Holzkugel</button>
+              </div>
+              <div class="field custom-amount-field">
+                <label for="custom-amount">Anderer Betrag (CHF)</label
+                ><input
+                  id="custom-amount"
+                  max="100000"
+                  min="1"
+                  placeholder="Optional"
+                  step="1"
+                  type="number"
+                />
+              </div>
+              <div class="donation-summary">
+                <div>Gewählter Betrag</div>
+                <strong id="chosen-amount">CHF 25</strong>
+                <div aria-live="polite" class="reward-note" id="reward-note">
+                  Ab CHF 1: Auf Wunsch erhältst du Projekt-Updates.
+                </div>
+              </div>
+              <div class="field">
+                <label>Zahlungsmethode (für Live-Version vorgesehen)</label>
+                <div class="payment-method">
+                  📱 TWINT <span class="demo-pill">RaiseNow noch nicht verbunden</span>
+                </div>
+              </div>
+              <button class="btn full" id="demo-donation">Demo-Spende simulieren →</button>
+              <p class="smallprint form-note">
+                Der Button löst ausdrücklich keine Zahlung aus. Er erhöht nur den lokalen
+                Demo-Zähler für diese Vorschau.
+              </p>
+              <div class="result" id="donation-result" role="status">
+                <h3>Danke fürs Mitmachen! 💚</h3>
+                <p>
+                  Die Testspende wurde nur in deinem Browser simuliert. Es ist kein Geld geflossen.
+                </p>
+                <button class="btn small light" data-share="spenden">Projekt teilen ↗</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="section">
+          <div class="shell donation-details-grid">
+            <div>
+              <div class="eyebrow">Finanzierung &amp; Projektstand</div>
+              <h2>Jeder Franken zählt.</h2>
+              <div class="progress-wrap">
+                <div class="progress-head">
+                  <div>
+                    <strong data-donation-total="">CHF 0</strong>
+                    <div class="muted">Spendenstand (noch nicht live)</div>
+                  </div>
+                  <span>Erstes Ziel: CHF 5’000</span>
+                </div>
+                <div class="progress"><span data-progress-bar=""></span></div>
+                <p class="smallprint">
+                  * Beispielziel. Es gibt noch keine offizielle Finanzierungskampagne und keine
+                  echte Zahlung.
+                </p>
+              </div>
+              <h3 class="donation-details-title">Wofür setzen wir deine Spende ein?</h3>
+              <p>
+                Mit den ersten CHF 5’000 finanzieren wir den Einstieg in die handwerkliche Umsetzung
+                am Walcheweiher. Der Forstdienst der Stadt Winterthur hat den Standort mitbesichtigt
+                und signalisiert, die Arbeiten übernehmen zu können. Wie viele Baumstämme und
+                Kugelrinnen konkret entstehen, legen wir mit dem Forstdienst nach dem
+                Spendenergebnis fest. Kommt mehr Geld zusammen, prüfen wir zusätzliche geeignete
+                Stämme oder weitere sinnvolle Elemente. Über die Verwendung informieren wir
+                transparent.
+              </p>
+              <div class="notice">
+                Wichtig: Vor dem Live-Start klären wir, wer die Spenden rechtlich entgegennimmt und
+                wie sie bei einer Nichtrealisierung behandelt werden.
+              </div>
+              <a class="btn light" href="transparenz.html">Kosten transparent ansehen →</a>
+            </div>
+            <div class="donation-hero-detail">
+              <img
+                alt="Echte Aufnahme der bereits liegenden Baumstämme bei den Walcheweihern"
+                src="bilder/baumstaemme-uebersicht.jpg"
+              />
+              <p>
+                <strong>Der Ort ist bereit für die nächsten Schritte.</strong><br />Die
+                Vorabstimmung mit dem Forstdienst ist erfolgt. Mit CHF 5’000 möchten wir die ersten
+                Kugelrinnen umsetzen. Wie viele es werden, hängt vom verfügbaren Budget und der
+                Detailplanung mit dem Forstdienst ab.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="section alt">
+          <div class="shell">
+            <div class="section-head">
+              <div>
+                <div class="eyebrow">Kleine Dankeschöns</div>
+                <h2>Mit deiner Spende rollt etwas an.</h2>
+              </div>
+              <p>
+                Jeder Betrag hilft. Bei grösseren Beiträgen möchten wir uns persönlich bedanken.
+              </p>
+            </div>
+            <div class="cards">
+              <article class="card">
+                <span class="num">Ab CHF 1</span>
+                <h3>Du bist dabei</h3>
+                <p>
+                  Auf Wunsch bekommst du Projekt-Updates: von der Planung bis zu den ersten
+                  rollenden Kugeln.
+                </p>
+              </article>
+              <article class="card">
+                <span class="num">Ab CHF 80</span>
+                <h3>Einladung zum Eröffnungsapéro</h3>
+                <p>
+                  Wir laden dich zum geplanten Eröffnungsapéro ein, sobald Termin und Durchführung
+                  feststehen.
+                </p>
+              </article>
+              <article class="card">
+                <span class="num">Ab CHF 100</span>
+                <h3>Eine Holzkugel für dich</h3>
+                <p>
+                  Zusätzlich zur Einladung schicken wir dir eine Holzkugel nach Hause. Geplant ist
+                  eine erste Serie von 50 Stück.
+                </p>
+              </article>
+            </div>
+            <p class="smallprint reward-disclaimer">
+              Dankeschöns sind aktuell geplant und noch nicht buchbar. Vor einem echten Spendenstart
+              müssen Kugelbeschaffung, Versandkosten, Adresserfassung und Verfügbarkeit verbindlich
+              geregelt sein.
+            </p>
+          </div>
+          <div class="shell inline-image">
+            <img
+              alt="Symbolbild: Kind mit einer Holzkugel an einer geschnitzten Holz-Kügelibahn"
+              src="bilder/kugelbahn-beispiel.jpg"
+            />
+            <div>
+              <h3>Eine Kugel für Winti</h3>
+              <p>
+                Ab CHF 100 möchten wir uns zusätzlich mit einer eigens für das Projekt gestalteten
+                Holzkugel bedanken. Wie sie genau aussehen wird, entscheiden wir noch.
+              </p>
+              <p class="smallprint">
+                Das Bild zeigt das Spielprinzip, nicht die versprochene Holzkugel oder den
+                fertiggestellten Standort.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="section alt">
+          <div class="shell">
+            <div class="section-head">
+              <div>
+                <div class="eyebrow">Finanzierung in Etappen</div>
+                <h2>Was wird mit dem<br />Geld möglich?</h2>
+              </div>
+              <p>
+                Mit CHF 5’000 möchten wir die ersten Kugelrinnen umsetzen. Der Forstdienst hat die
+                Idee vor Ort positiv aufgenommen und Bereitschaft zur Umsetzung signalisiert. Mit
+                zusätzlichen Mitteln könnten weitere geeignete Stämme bearbeitet werden; den Umfang
+                planen wir nach der Sammlung.
+              </p>
+            </div>
+            <div class="milestone">
+              <strong>CHF 2'000</strong>
+              <div>
+                <h3>Erste Vorbereitungen für die handwerkliche Arbeit</h3>
+                <p>
+                  Ein Beitrag zu den ersten Arbeitsschritten – noch keine Zusage für eine bestimmte
+                  Anzahl Rinnen.
+                </p>
+              </div>
+            </div>
+            <div class="milestone">
+              <strong>CHF 5'000</strong>
+              <div>
+                <h3>Beginn der Kugelrinnen-Arbeiten</h3>
+                <p>
+                  Mit rund CHF 5’000 wollen wir die Bearbeitung erster geeigneter Baumstämme
+                  finanzieren. Das Budget ist insbesondere für die handwerkliche Umsetzung
+                  vorgesehen.
+                </p>
+              </div>
+            </div>
+            <a class="btn" href="transparenz.html">Alle Kosten im Detail ↗</a>
+          </div>
+        </section>
+      </section>
+
+      <section class="section alt">
+        <div class="shell split">
+          <div>
+            <div class="eyebrow">Hilf mit, die Idee bekannt zu machen</div>
+            <h2>Erzähl's weiter.<br />Winti macht mit.</h2>
+            <p>
+              Je mehr Menschen von der Idee erfahren, desto besser. Teile die Seite mit
+              Freund:innen, Familien, Quartiervereinen und Menschen, die sich für Winterthur
+              engagieren.
+            </p>
+            <div class="social">
+              <button data-share="start">WhatsApp ↗</button
+              ><button data-share="start" data-share-kind="email">E-Mail ↗</button
+              ><button data-copy="#start">Link kopieren ⧉</button>
+            </div>
+            <p class="smallprint share-note">
+              #ChugelibahnWinti · Beiträge aus Social Media werden erst nach Freigabe eingebunden.
+            </p>
+          </div>
+          <div class="share-poster">
+            <span class="tag poster-winti">WINTI macht mit!</span>
+            <div class="share-poster-title">ROLLT<br />BEI DIR?</div>
+            <div class="share-poster-description">
+              Eine Idee zum Teilen.<br />Eine Kugelbahn zum Verlieben.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="shell footer-grid">
+        <div>
+          <a class="logo footer-logo" href="index.html"
+            ><span class="logo-mark">●</span> KÜGELIBAHN WINTI.</a
+          >
+          <p class="footer-description">
+            Ein Herzensprojekt aus Winterthur – für Kinder und Familien in Winterthur.
+          </p>
+          <small class="footer-note">© 2026 · Kügelibahn Winti</small>
+        </div>
+        <div>
+          <strong>Entdecken</strong>
+          <div>
+            <a href="index.html">Das Projekt</a><a href="petition.html">Petition</a
+            ><a href="spenden.html">Spenden</a><a href="transparenz.html">Transparenz</a>
+          </div>
+          <p class="smallprint footer-note">
+            Impressum und Datenschutz werden vor Veröffentlichung ergänzt.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <div class="sticky-cta">
+      <a class="btn light" href="petition.html">Petition ✍️</a
+      ><a class="btn" href="spenden.html">Spenden 💚</a>
+    </div>
+    <div aria-live="polite" class="toast" id="toast" role="status"></div>
+  </body>
+</html>
