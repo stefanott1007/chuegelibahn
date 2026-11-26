@@ -2105,3 +2105,44 @@ body {
   font-size: 1.05rem;
   line-height: 1.65;
 }
+
+/* Donation goal on the first project milestone; no unverified amount displayed. */
+.roadmap-fundraising .fundraising-progress {
+  margin: 20px 0 16px;
+}
+.fundraising-progress-labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-weight: 700;
+}
+.fundraising-current {
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+.fundraising-progress-track {
+  height: 10px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #dce5d5;
+  margin: 10px 0 8px;
+}
+.fundraising-progress-fill {
+  width: 0;
+  height: 100%;
+  background: var(--green);
+}
+.roadmap-fundraising .fundraising-progress-note {
+  color: var(--muted);
+  font-size: .8rem;
+  line-height: 1.45;
+  margin: 0;
+}
+.roadmap-fundraising .fundraising-cta {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 11px 18px;
+  font-size: .9rem;
+}
