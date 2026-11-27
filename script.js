@@ -58,7 +58,7 @@
       element.textContent = money(state.total);
     });
     document.querySelectorAll("[data-progress-bar]").forEach((element) => {
-      element.style.width = Math.min(100, (state.total / 5000) * 100) + "%";
+      element.style.width = Math.min(100, (state.total / 5800) * 100) + "%";
     });
     document.querySelectorAll("[data-petition-progress]").forEach((element) => {
       element.style.width = Math.min(100, (state.signatures / 20000) * 100) + "%";
